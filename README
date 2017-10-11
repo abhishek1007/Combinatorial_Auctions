@@ -1,0 +1,81 @@
+==================================================================							
+
+Author: 
+
+Abhishek Chowdhry
+2nd Year, B. Tech Computer Science and Engineering, IIT Ropar
+Email: abhishek.chowdhry97@gmail.com
+Github: github.com/abhishek1007 
+
+==================================================================
+
+COAL BLOCKS AUCTION
+
+The Ministry for Power, Coal, New and Renewable Energy needs help with the auctioning of the
+coal blocks whose allotments were cancelled by the Supreme Court. Being the smartest AI
+student, the Ministry has approached you for writing software that will take as inputs the different
+bids and outputs an allotment that will maximize the government’s revenue. The Ministry has
+decided to auction N coal blocks and has asked companies to bid for each block. However, the
+companies with aim of maximizing their profit submit bids that combine multiple blocks. The
+companies would like to have ownership of as many blocks in a state so as to minimize their costs
+for developing the infrastructure. For example, a company might bid 400 (in crores) for blocks 1,
+3, 4, and 7, but bid 100 for only 1, 3 and 4.
+	
+Your software should tell the Ministry the bids that should be accepted. The Ministry has decided
+not to accept more than one bid from any company and not every company needs to win a bid. A
+company can submit any number of bids. It might also happen that some of the coal blocks do
+not get allotted at the end of the auction.     
+Formulate this problem as a state space search for a single agent and implement hill climbing
+with random restarts as your initial solution. You are welcome to add any novel element to the
+hill-climbing search. However, you are not allowed to use any integer linear programming or
+related algorithms to solve this problem. Include in your submission a brief description of your
+modification to hill climbing search.
+
+Input Format:
+Your code must be able to read inputs from a text file that will be provided as command argument.
+The input format is as follows
+T
+N
+B
+C
+cid ncid
+cid nbid bid-value block-id block id ... block id
+cid nbid bid-value block-id block-id ... block-id
+T refers to the wallclock time in minutes that will be given to your software to find a solution. N is
+the number of coal blocks; C is the number of companies; B is the number of bids. The bids of a
+single company are grouped together. The first line is the company id (cid) and the total number
+of bids made this company (ncid). Each line thereafter corresponds to a bid. Each bid starts with
+the company id, the number of coal blocks bid by the company in this bid (nbid), the bid-value,
+and the coal block ids. The bids are implicitly numbered. This is repeated for every company. For
+example,
+3
+7
+2
+6
+0 3
+0 4 400 0 2 3 6
+0 3 100 0 2 3
+0 3 50 2 3 4
+1 3
+1 3 300 1 4 5
+1 2 200 1 5
+1 3 40 1 3 4
+
+The output of the code will be written to a text file that will also be provide
+as a command argument in the following format:
+2	
+	revenue bid-id bid-id ... bid-id
+For the example problem, this would be
+700 0 3
+
+==================================================================							
+
+Running the Code
+
+1) Open the terminal and go to the directory containing main.cpp. 
+2) In the terminal type "g++ main.cpp -o ./mysolution" and press enter.
+3) Now if the name of the input file is input.txt and the file in which you want the output is output.txt then type: "./mysolution input.txt output.txt" and press enter.
+4) The result will be displayed on the screen and also saved in the file "output.txt".
+5) The output directory contains the outputs for the sample txt files given to us.
+
+
